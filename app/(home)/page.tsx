@@ -5,9 +5,11 @@
 // router를 사용해서 routing 하는 기능을 이런 식으로 처리함
 
 import Link from "next/link";
+import Movie from "../../components/movie";
+import styles from "../../styles/home.module.css"
 
 export const metadata = {
-    title: "Home"
+  title: "Home"
 };
 
 // API 요청을 처리하는 방식
@@ -20,18 +22,20 @@ async function getMovies() {
     // fetch된 URL을 자동으로 캐싱시켜준다
     // browser에서 캐싱할 일이 없다(백엔드에서 처리).
     // 그래서 처음에만 로딩이 발생한다
-    const response = await fetch(API_URL);
-    const json = await response.json();
-    return json;
+  const response = await fetch(API_URL);
+  const json = await response.json();
+  return json;
 }
 
 export default async function HomePage () {
-    const movies = await getMovies();
-    return (
-    <div>
-        {movies.map(movie => <li key={movie.id}><Link href={`/movies/${movie.id}`}>{movie.title}</Link></li>)}
-    </div>
-    );
+  const movies = await getMovies();
+  return (
+  <div className={styles.container}>
+    {movies.map(movie => (
+      <Movie key={movie.id} id={movie.id} poster_path={movie.poster_path} title={movie.title} />
+    ))}
+  </div>
+  );
 }
 
 // route groups는 이런 식"(home)"으로 폴더 이름을 괄호로 묶어줘야한다.

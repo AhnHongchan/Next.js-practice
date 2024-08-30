@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import Navigation from "../components/navigation"
+import "../styles/global.css";
 
 // Home page에서만 사용할 것 같다면 (home) 폴더의 page.tsx로
 // metadata를 옮길 수 있다.
