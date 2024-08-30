@@ -3,7 +3,7 @@ import styles from "../styles/movie-videos.module.css";
 
 // 여기서도 캐싱 처리됨
 async function getVideos(id: string) {
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    // await new Promise((resolve) => setTimeout(resolve, 3000));
     // 단순히 에러 던지는 법(페이지는 아무 표시 안 남)
     // 에러 페이지는 따로 만들어야 함
     // movies/[id]/error.tsx에 있음
