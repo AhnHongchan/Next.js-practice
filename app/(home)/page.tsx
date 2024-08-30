@@ -7,6 +7,7 @@
 import Link from "next/link";
 import Movie from "../../components/movie";
 import styles from "../../styles/home.module.css"
+import { API_URL } from "../constants";
 
 export const metadata = {
   title: "Home"
@@ -14,7 +15,6 @@ export const metadata = {
 
 // API 요청을 처리하는 방식
 
-export const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies"
 
 async function getMovies() {
     // 1초 동안 로딩 거는 행위

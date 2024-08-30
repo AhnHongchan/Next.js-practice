@@ -1,4 +1,4 @@
-import { API_URL } from "../app/(home)/page";
+import { API_URL } from "../app/constants";
 import styles from "../styles/movie-videos.module.css";
 
 // 여기서도 캐싱 처리됨
