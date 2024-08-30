@@ -31,3 +31,4 @@ export default function Movie({ title, id, poster_path }: IMovieProps) {
 // 유저가 클릭하기 전에 Next.js가 페이지들을 미리 로드할꺼다
 // 이제 스크롤을 내려서 해당 Link가 rendering 되는 순간 미리 로드한다고 생각하면 된다.
 // 하지만 DB 부하의 영향이 있을 수 있으므로 신중하게 쓰기 바람
+// vercel로 배포 완료
